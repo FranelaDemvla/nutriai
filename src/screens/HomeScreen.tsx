@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { SafeAreaView, View } from 'react-native'
 import { getAiResponse } from '../services/openai'
 import { CardList } from '../ui/CardList'
 import { CardListItemProps } from '../ui/CardListItem'

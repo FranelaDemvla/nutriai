@@ -1,9 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
-import { CardListItemProps } from './src/ui/CardListItem'
-import { ListTextInput } from './src/ui/ListTextInput'
-import { CardList } from './src/ui/CardList'
-import { getAiResponse } from './src/services/openai'
 import { HomeScreen } from './src/screens/HomeScreen'
 
 if (__DEV__) {
