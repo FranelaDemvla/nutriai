@@ -11,8 +11,8 @@ export const HomeScreen = () => {
   const [selectedDate, setSelectedDate] = useState(dayjs(new Date()))
 
   const handleDateConfirm = (date: Date) => {
-    setSelectedDate(dayjs(date))
     setIsDatePickerVisible(false)
+    setSelectedDate(dayjs(date))
   }
 
   const handlePreviousPage = () => {
