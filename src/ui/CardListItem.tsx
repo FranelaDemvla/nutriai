@@ -25,7 +25,7 @@ export const CardListItem = ({ title, info }: CardListItemProps) => {
         </View>
         <View style={styles.detailsContainerSection}>
           <Text white text70BO>
-            {info.protein}
+            {info.protein}g
           </Text>
           <Text white text70>
             protein
@@ -33,7 +33,7 @@ export const CardListItem = ({ title, info }: CardListItemProps) => {
         </View>
         <View style={styles.detailsContainerSection}>
           <Text white text70BO>
-            {info.fat}
+            {info.fat}g
           </Text>
           <Text white text70>
             fat
@@ -41,7 +41,7 @@ export const CardListItem = ({ title, info }: CardListItemProps) => {
         </View>
         <View style={styles.detailsContainerSection}>
           <Text white text70BO>
-            {info.sugar}
+            {info.sugar}g
           </Text>
           <Text white text70>
             sugar
@@ -49,7 +49,7 @@ export const CardListItem = ({ title, info }: CardListItemProps) => {
         </View>
         <View style={styles.detailsContainerSection}>
           <Text white text70BO>
-            {info.totalCarbs}
+            {info.totalCarbs}g
           </Text>
           <Text white text70>
             total carbs
@@ -57,7 +57,7 @@ export const CardListItem = ({ title, info }: CardListItemProps) => {
         </View>
         <View style={styles.detailsContainerSection}>
           <Text white text70BO>
-            {info.sodium}
+            {info.sodium}mg
           </Text>
           <Text white text70>
             sodium
