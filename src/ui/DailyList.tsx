@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { View, StyleSheet } from 'react-native'
-import { Text } from 'react-native-ui-lib'
 import { CardList } from './CardList'
 import { ListTextInput } from './ListTextInput'
 import { CardListItemProps } from './CardListItem'
