@@ -25,6 +25,7 @@ export const getAiResponse = async (
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',
         messages: gptMessages,
+        response_format: { type: "json_object" },
       }),
     })
       .then((response) => response.json())
