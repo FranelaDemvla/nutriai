@@ -1,28 +1,13 @@
 import React, { useState } from 'react'
-import { getAiResponse } from '../services/openai'
-import { CardList } from '../ui/CardList'
-import { CardListItemProps } from '../ui/CardListItem'
-import { ListTextInput } from '../ui/ListTextInput'
 import { View, StyleSheet, Pressable } from 'react-native'
 import { Text } from 'react-native-ui-lib'
 import DateTimePickerModal from 'react-native-modal-datetime-picker'
 import dayjs from 'dayjs'
+import { DailyList } from '../ui/DailyList'
 
 export const HomeScreen = () => {
-  const [newEntry, setNewEntry] = useState('')
-  const [cardList, setCardList] = useState<CardListItemProps[]>([])
   const [isDatePickerVisible, setIsDatePickerVisible] = useState(false)
   const [selectedDate, setSelectedDate] = useState(dayjs(new Date()))
-
-  const handleTextInputOnPress = async () => {
-    const result = await getAiResponse(newEntry)
-
-    if (result) {
-      setCardList([...cardList, { title: newEntry, info: result }])
-    }
-
-    setNewEntry('')
-  }
 
   const handleDateConfirm = (date: Date) => {
     setSelectedDate(dayjs(date))
@@ -42,20 +27,14 @@ export const HomeScreen = () => {
           </Text>
         </Pressable>
         <DateTimePickerModal
+          date={selectedDate.toDate()}
           isVisible={isDatePickerVisible}
           mode="date"
           onConfirm={handleDateConfirm}
           onCancel={() => setIsDatePickerVisible(false)}
         />
       </View>
-      <View style={styles.container}>
-        {cardList && <CardList items={cardList} />}
-        <ListTextInput
-          value={newEntry}
-          onChange={setNewEntry}
-          onPress={handleTextInputOnPress}
-        />
-      </View>
+      <DailyList day={dayjs(selectedDate).format('DD-MM-YYYY')} />
     </View>
   )
 }
