@@ -21,7 +21,6 @@ export const DailyList = ({ day }: DailyListProps) => {
       } else {
         setCardList([])
       }
-      console.log(day, data)
     })
   }, [day])
 

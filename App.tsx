@@ -4,7 +4,7 @@ import { HomeScreen } from './src/screens/HomeScreen'
 import { Colors, Typography, Spacings } from 'react-native-ui-lib'
 
 if (__DEV__) {
-  import('./ReactotronConfig').then(() => console.log('Reactotron Configured'))
+  import('./ReactotronConfig')
 }
 
 Colors.loadColors({
